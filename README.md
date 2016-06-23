@@ -1,6 +1,51 @@
 # geometry.less author : swxs date : 2016/6/23
+
 文件类型less
+
 使用css完成几何图形的绘制，实现大小的简易自定义
+
+//通用矩形绘制(IE6+)
+.rect(@width:10px, @height:10px, @color:#000)
+
+//通用正方形绘制(IE6+)
+.square(@width:10px, @color:#000)
+
+通用等腰三角绘制(IE6+)
+.isoscelesTriangle(top, @Height:10px, @borderWidth:10px, @Color:#000)
+.isoscelesTriangle(bottom, @Height:10px, @borderWidth:10px, @color:#000)
+.isoscelesTriangle(left, @Height:10px, @borderWidth:10px, @color:#000)
+.isoscelesTriangle(right, @Height:10px, @borderWidth:10px, @color:#000)
+.isoscelesTriangle(top, @Height:10px, @topAngle:90deg, @Color:#000)
+.isoscelesTriangle(bottom, @Height:10px, @topAngle:90deg, @Color:#000)
+.isoscelesTriangle(left, @Height:10px, @topAngle:90deg, @Color:#000)
+.isoscelesTriangle(right, @Height:10px, @topAngle:90deg, @Color:#000)
+
+
+通用直角三角绘制(IE6+)
+.rightTriangle(top-right, @Height:10px, @borderWidth:10px, @Color:#000)
+.rightTriangle(top-left, @Height:10px, @borderWidth:10px, @Color:#000)
+.rightTriangle(bottom-right, @Height:10px, @borderWidth:10px, @color:#000)
+.rightTriangle(bottom-left, @Height:10px, @borderWidth:10px, @color:#000)
+.rightTriangle(left-top, @Height:10px, @borderWidth:10px, @color:#000)
+.rightTriangle(left-bottom, @Height:10px, @borderWidth:10px, @color:#000)
+.rightTriangle(right-top, @Height:10px, @borderWidth:10px, @color:#000)
+.rightTriangle(right-bottom, @Height:10px, @borderWidth:10px, @color:#000)
+.rightTriangle(top-right, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(top-left, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(bottom-right, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(bottom-left, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(left-top, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(left-bottom, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(right-top, @Height:10px, @topAngle:90deg, @Color:#000)
+.rightTriangle(right-bottom, @Height:10px, @topAngle:90deg, @Color:#000)
+
+
+
+
+
+
+
+
 //  平行四边形
 //  .parallelogram(@width:10px, @height:10px, @angleX:0, @angleY:0, @backgroundColor:#000)
 //  
@@ -10,15 +55,7 @@
 //  正方形
 //  .square(@width:10px, @backgroundColor:#000)
 //  
-// 	三角
-//  .triangle(top, @borderHeight:10px, @borderWidth:10px, @borderColor:#000)
-//  .triangle(bottom, @borderHeight:10px, @borderWidth:10px, @bordercolor:#000)
-//  .triangle(left, @borderHeight:10px, @borderWidth:10px, @bordercolor:#000)
-//  .triangle(right, @borderHeight:10px, @borderWidth:10px, @bordercolor:#000)
-//  .triangle(top, @borderHeight:10px, @borderWidthAngle:90deg, @borderColor:#000)   
-//  .triangle(bottom, @borderHeight:10px, @borderWidthAngle:90deg, @borderColor:#000)
-//  .triangle(left, @borderHeight:10px, @borderWidthAngle:90deg, @borderColor:#000)
-//  .triangle(right, @borderHeight:10px, @borderWidthAngle:90deg, @borderColor:#000)
+
 //  
 //  梯形
 //  .trapezoid(top, @topWidth:10px, @borderHeight:10px, @bottomWidth:10px, @borderColor:#000)
