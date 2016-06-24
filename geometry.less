@@ -1,4 +1,4 @@
-//通用矩形绘制(IE6+)
+//矩形绘制[I](IE6+)
 // *    宽        @width
 // *    高        @height
 // *    颜色      @color
@@ -9,16 +9,17 @@
     background-color: @color;
 }
 
-//通用正方形绘制(IE6+)
+//正方形绘制[I](IE6+)
 // *    宽        @width
 // *    颜色      @color
 .square(@width:10px, @color:#000) {
     display: block;
     width: @width;
+    height: @width;
     background-color: @color;
 }
 
-//通用等腰三角绘制(IE6+)
+//等腰三角形绘制[I](IE6+)
 // *    方位      top,bottom,left,right
 // *    高        @height
 // -    变宽长    @borderWidth
@@ -61,7 +62,7 @@
     border-bottom: @borderWidth dashed transparent;
 }
 .isoscelesTriangle(top, @height:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan((@topAngle / 2)) * @height;
+    @_borderwidth : round(tan((@topAngle / 2)) * @height);
     display:block;
     width: 0px;
     height: 0px;
@@ -71,7 +72,7 @@
     border-left: @_borderwidth dashed transparent;
 }
 .isoscelesTriangle(bottom, @height:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan((@topAngle / 2)) * @height;
+    @_borderwidth : round(tan((@topAngle / 2)) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -81,7 +82,7 @@
     border-left: @_borderwidth dashed transparent;
 }
 .isoscelesTriangle(left, @height:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan((@topAngle / 2)) * @height;
+    @_borderwidth : round(tan((@topAngle / 2)) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -91,7 +92,7 @@
     border-bottom: @_borderwidth dashed transparent;
 }
 .isoscelesTriangle(right, @height:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan((@topAngle / 2)) * @height;
+    @_borderwidth : round(tan((@topAngle / 2)) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -101,8 +102,8 @@
     border-bottom: @_borderwidth dashed transparent;
 }
 
-//通用直角三角绘制(IE6+)
-// *    方位      top,bottom,left,right
+//直角三角形绘制[I](IE6+)
+// *    方位      top-right,top-left,bottom-right,bottom-left,left-top,left-bottom,right-top,right-bottom
 // *    高        @height
 // -    变宽长    @borderWidth
 // -    顶角      @topAngle
@@ -172,7 +173,7 @@
     border-bottom: @borderWidth dashed transparent;
 }
 .rightTriangle(top-right, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display:block;
     width: 0px;
     height: 0px;
@@ -181,7 +182,7 @@
     border-right: @_borderwidth dashed transparent;
 }
 .rightTriangle(top-left, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display:block;
     width: 0px;
     height: 0px;
@@ -190,7 +191,7 @@
     border-left: @_borderwidth dashed transparent;
 }
 .rightTriangle(bottom-right, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -199,7 +200,7 @@
     border-right: @_borderwidth dashed transparent;
 }
 .rightTriangle(bottom-left, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -208,7 +209,7 @@
     border-left: @_borderwidth dashed transparent;
 }
 .rightTriangle(left-top, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -217,7 +218,7 @@
     border-top: @_borderwidth dashed transparent;
 }
 .rightTriangle(left-bottom, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -226,7 +227,7 @@
     border-bottom: @_borderwidth dashed transparent;
 }
 .rightTriangle(right-top, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -235,7 +236,7 @@
     border-top: @_borderwidth dashed transparent;
 }
 .rightTriangle(right-bottom, @height:10px, @topAngle:45deg, @color:#000) when not(ispixel(@topAngle)) {
-    @_borderwidth : tan(@topAngle) * @height;
+    @_borderwidth : round(tan(@topAngle) * @height);
     display: block;
     width: 0px;
     height: 0px;
@@ -244,207 +245,341 @@
     border-bottom: @_borderwidth dashed transparent;
 }
 
+//等腰梯形绘制[I](IE6+)
+// *    方位      top,bottom,left,right
+// *    高        @height
+// *    顶边长    @topWidth
+// -    底边长    @bottomWidth
+// -    顶角      @topAngle
+// *    颜色      @color
+.isoscelesTrapezoid(top, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @_borderWidth : round(( @bottomWidth - @topWidth ) / 2);
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-bottom:   @height solid @color;
+    border-bottom:   @height solid @color~"\9"; // IE8
+    border-right: @_borderWidth dashed transparent;
+    border-left:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(bottom, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @_borderWidth : round(( @bottomWidth - @topWidth ) / 2);
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-top:   @height solid @color;
+    border-top:   @height solid @color ~"\9"; // IE8
+    border-right: @_borderWidth dashed transparent;
+    border-left:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(left, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @_borderWidth : round(( @bottomWidth - @topWidth ) / 2);
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-right:   @height solid @color;
+    border-right:   @height solid @color ~"\9"; // IE8
+    border-top: @_borderWidth dashed transparent;
+    border-bottom:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(right, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @_borderWidth : round(( @bottomWidth - @topWidth ) / 2);
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-left:   @height solid @color;
+    border-left:   @height solid @color ~"\9"; // IE8
+    border-top: @_borderWidth dashed transparent;
+    border-bottom:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(top, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @_borderWidth : round(tan((@topAngle / 2)) * @height);
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-bottom:   @height solid @color;
+    border-bottom:   @height solid @color ~"\9"; // IE8
+    border-right: @_borderWidth dashed transparent;
+    border-left:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(bottom, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @_borderWidth : round(tan((@topAngle / 2)) * @height);
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-top:   @height solid @color;
+    border-top:   @height solid @color ~"\9"; // IE8
+    border-right: @_borderWidth dashed transparent;
+    border-left:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(left, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @_borderWidth : round(tan((@topAngle / 2)) * @height);
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-right:   @height solid @color;
+    border-right:   @height solid @color ~"\9"; // IE8
+    border-top: @_borderWidth dashed transparent;
+    border-bottom:  @_borderWidth dashed transparent;
+}
+.isoscelesTrapezoid(right, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @_borderWidth : round(tan((@topAngle / 2)) * @height);
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-left:   @height solid @color;
+    border-left:   @height solid @color ~"\9"; // IE8
+    border-top: @_borderWidth dashed transparent;
+    border-bottom:  @_borderWidth dashed transparent;
+}
+
+
+//直角梯形绘制[I](IE6+)
+// *    方位     top,bottom,left,right
+// *    高       @height
+// *    顶边长   @topWidth
+// -    底边长   @bottomWidth
+// -    顶角     @topAngle
+// *    颜色     @color
+.isoscelestrapezoid(top, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @borderWidth : ( @bottomWidth - @topWidth ) / 2;
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-bottom:   @height solid @color;
+    border-bottom:   @height solid @color~"\9"; // IE8
+    border-right: @borderWidth dashed transparent;
+    border-left:  @borderWidth dashed transparent;
+}
+.isoscelestrapezoid(bottom, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @borderWidth : ( @bottomWidth - @topWidth ) / 2;
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-top:   @height solid @color;
+    border-top:   @height solid @color ~"\9"; // IE8
+    border-right: @borderWidth dashed transparent;
+    border-left:  @borderWidth dashed transparent;
+}
+.isoscelestrapezoid(left, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @borderWidth : ( @bottomWidth - @topWidth ) / 2;
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-right:   @height solid @color;
+    border-right:   @height solid @color ~"\9"; // IE8
+    border-top: @borderWidth dashed transparent;
+    border-bottom:  @borderWidth dashed transparent;
+}
+.isoscelestrapezoid(right, @height:10px, @topWidth:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
+    @borderWidth : ( @bottomWidth - @topWidth ) / 2;
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-left:   @height solid @color;
+    border-left:   @height solid @color ~"\9"; // IE8
+    border-top: @borderWidth dashed transparent;
+    border-bottom:  @borderWidth dashed transparent;
+}
+.isoscelestrapezoid(top, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @borderwidth : tan((@topAngle / 2)) * @height;
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-bottom:   @height solid @color;
+    border-bottom:   @height solid @color ~"\9"; // IE8
+    border-right: @borderwidth dashed transparent;
+    border-left:  @borderwidth dashed transparent;
+}
+.isoscelestrapezoid(bottom, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @borderwidth : tan((@topAngle / 2)) * @height;
+    display: block;
+    width: @topWidth;
+    height: 0px;
+    border-top:   @height solid @color;
+    border-top:   @height solid @color ~"\9"; // IE8
+    border-right: @borderwidth dashed transparent;
+    border-left:  @borderwidth dashed transparent;
+}
+.isoscelestrapezoid(left, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @borderwidth : tan((@topAngle / 2)) * @height;
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-right:   @height solid @color;
+    border-right:   @height solid @color ~"\9"; // IE8
+    border-top: @borderwidth dashed transparent;
+    border-bottom:  @borderwidth dashed transparent;
+}
+.isoscelestrapezoid(right, @height:10px, @topWidth:10px, @topAngle:90deg, @color:#000) when not(ispixel(@topAngle)) {
+    @borderwidth : tan((@topAngle / 2)) * @height;
+    display: block;
+    width: 0px;
+    height: @topWidth;
+    border-left:   @height solid @color;
+    border-left:   @height solid @color ~"\9"; // IE8
+    border-top: @borderwidth dashed transparent;
+    border-bottom:  @borderwidth dashed transparent;
+}
+
+//三角形绘制[II](IE6+)
+// *    类型     ASA
+// *    左角     @leftAngle
+// *    底边长   @bottomSide
+// *    右角     @rightAngle
+// *    颜色     @color
+// *    背景颜色 @backgroundColor
+.triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle >= 90deg) and (@rightAngle < 180deg) {
+    @_height : round(@bottomSide / ( (1/tan(@leftAngle)) - (1/tan(180deg-@rightAngle))));
+    @_mainWidth : round(@_height / tan(@leftAngle));
+    @_subWidth : round(@_height / tan(180deg-@rightAngle));
+    position: relative;
+    .rightTriangle(top-left, @_height, @_mainWidth, @color);
+    &:before {
+        content: '';
+        position: absolute;
+        left: -@_subWidth;
+        .rightTriangle(top-left, @_height, @_subWidth, @backgroundColor);
+    }
+}
+.triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+    @_height : round(@bottomSide / ( (1/tan(@leftAngle)) + (1/tan(@rightAngle))));
+    @_mainWidth : round(@_height / tan(@leftAngle));
+    @_subWidth : round(@_height / tan(@rightAngle));
+    position: relative;
+    .rightTriangle(top-left, @_height, @_mainWidth, @color);
+    &:before {
+        content: '';
+        position: absolute;
+        .rightTriangle(top-right, @_height, @_subWidth, @color);
+    }
+}
+.triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle >= 90deg) and (@leftAngle < 180deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+    @_height : round(@bottomSide / ( (1/tan(@rightAngle)) - (1/tan(180deg - @leftAngle))));
+    @_mainWidth : round(@_height / tan(@rightAngle));
+    @_subWidth : round(@_height / tan(180deg-@leftAngle));
+    position: relative;
+    .rightTriangle(top-right, @_height, @_mainWidth, @color);
+    &:before {
+        content: '';
+        position: absolute;
+        .rightTriangle(top-right, @_height, @_subWidth, @backgroundColor);
+    }
+}
+
+//五角星绘制[III](IE8+)
+// *    三角形的高  @height
+// *    颜色        @color
+.star-five(@height:10px, @color:#000) {
+    @_top : @height;
+    @_offsetTop : @height;
+    @_offsetLeft : round(tan(54deg) * @height);
+    position: relative;
+    top: @_top;
+    .isoscelesTriangle(bottom, @height, 108deg, @color);
+   &:before {
+       content: '';
+       position: absolute;
+       top: -@_offsetTop;
+       left: -@_offsetLeft;
+       .isoscelesTriangle(bottom, @height, 108deg, @color);
+       .tranRotate(70deg);
+    }
+    &:after {
+       content: '';
+       position: absolute;
+       top: -@_offsetTop;
+       left: -@_offsetLeft;
+       .isoscelesTriangle(bottom, @height, 108deg, @color);
+       .tranRotate(-70deg);
+    }
+}
+
+//六角星绘制[II](IE6+)
+// *    三角形的高   @height
+// *    颜色         @color
+.star-six(@height:20px, @color:#000) {
+    @_offsetTop : round(@height / 3);
+    @_offsetLeft : round(@height * pow(3, -1/2));
+    position: relative;
+    .isoscelesTriangle(top, @height, 60deg, @color);
+    &:after {
+        content: "";
+        position: absolute;
+        .isoscelesTriangle(bottom, @height, 60deg, @color);
+        top: @_offsetTop;
+        left: -@_offsetLeft;
+    }
+}
+
+//八角星绘制[II](IE6+)
+// *    矩形的高    @height
+// *    颜色        @color
+.star-eight(@width:20px, @color:#000) {
+    @_offsetTop: round(( pow(2, 1/2) - 1 ) * @width / 2);
+    position: relative;
+    top : @_offsetTop;
+    .square(@width, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        .square(@width, @color);
+        .tranRotate(45deg);
+    }
+}
+
+//十二角星绘制[III](IE6+)
+// *    矩形的高    @height
+// *    颜色        @color
+.star-twelve(@width:20px, @color:#000) {
+    @_offsetTop : round((pow(3, -1/2) * 2 - 1 ) * @width);
+    position: relative;
+    top: @_offsetTop;
+    .square(@width, @color);
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        .square(@width, @color);
+    }
+    &:before {
+        .tranRotate(30deg);
+    }
+    &:after {
+        .tranRotate(60deg);
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 // .parallelogram(@width:10px, @height:10px, @angleX:0deg, @angleY:0deg, @backgroundcolor:#000) {
 //     @AngleX : @angleX;
 //     @AngleY : @angleY;
-//     .dib();
+//     display: block;
 //     width: @width;
 //     height: @height;
 //     .tranSkew(@AngleX, @AngleY);
 //     background-color: @backgroundcolor;
 // }
-// .trapezoid(top, @topWidth:10px, @height:10px, @bottomWidth:10px, @color:#000) when (ispixel(@bottomWidth)) {
-//     @borderWidth : ( @bottomWidth - @topWidth ) / 2;
-//     .dib();
-//     width: @topWidth;
-//     height: 0px;
-//     border-bottom:   @borderheight solid @bordercolor;
-//     border-bottom:   @borderheight solid @bordercolor~"\9"; // IE8
-//     border-right: @borderWidth dashed transparent;
-//     border-left:  @borderWidth dashed transparent;
-// }
-// .trapezoid(bottom, @topWidth:10px, @borderheight:10px, @bottomWidth:10px, @bordercolor:#000) when (ispixel(@bottomWidth)) {
-//     @borderWidth : ( @bottomWidth - @topWidth ) / 2;
-//     .dib();
-//     width: @topWidth;
-//     height: 0px;
-//     border-top:   @borderheight solid @bordercolor;
-//     border-top:   @borderheight solid @bordercolor ~"\9"; // IE8
-//     border-right: @borderWidth dashed transparent;
-//     border-left:  @borderWidth dashed transparent;
-// }
-// .trapezoid(left, @topWidth:10px, @borderHeight:10px, @bottomWidth:10px, @borderColor:#000) when (ispixel(@bottomWidth)) {
-//     @borderWidth : ( @bottomWidth - @topWidth ) / 2;
-//     .dib();
-//     width: 0px;
-//     height: @topWidth;
-//     border-right:   @borderHeight solid @borderColor;
-//     border-right:   @borderHeight solid @borderColor ~"\9"; // IE8
-//     border-top: @borderWidth dashed transparent;
-//     border-bottom:  @borderWidth dashed transparent;
-// }
-// .trapezoid(right, @topWidth:10px, @borderHeight:10px, @bottomWidth:10px, @borderColor:#000) when (ispixel(@bottomWidth)) {
-//     @borderWidth : ( @bottomWidth - @topWidth ) / 2;
-//     .dib();
-//     width: 0px;
-//     height: @topWidth;
-//     border-left:   @borderHeight solid @borderColor;
-//     border-left:   @borderHeight solid @borderColor ~"\9"; // IE8
-//     border-top: @borderWidth dashed transparent;
-//     border-bottom:  @borderWidth dashed transparent;
-// }
-// .trapezoid(top, @topWidth:10px, @borderHeight:10px, @borderAngle:90deg, @borderColor:#000) when not(ispixel(@borderAngle)) {
-//     @borderwidth : tan((@borderAngle / 2)) * @borderHeight;
-//     .dib();
-//     width: @topWidth;
-//     height: 0px;
-//     border-bottom:   @borderHeight solid @borderColor;
-//     border-bottom:   @borderHeight solid @borderColor ~"\9"; // IE8
-//     border-right: @borderwidth dashed transparent;
-//     border-left:  @borderwidth dashed transparent;
-// }
-// .trapezoid(bottom, @topWidth:10px, @borderHeight:10px, @borderAngle:90deg, @borderColor:#000) when not(ispixel(@borderAngle)) {
-//     @borderwidth : tan((@borderAngle / 2)) * @borderHeight;
-//     .dib();
-//     width: @topWidth;
-//     height: 0px;
-//     border-top:   @borderHeight solid @borderColor;
-//     border-top:   @borderHeight solid @borderColor ~"\9"; // IE8
-//     border-right: @borderwidth dashed transparent;
-//     border-left:  @borderwidth dashed transparent;
-// }
-// .trapezoid(left, @topWidth:10px, @borderHeight:10px, @borderAngle:90deg, @borderColor:#000) when not(ispixel(@borderAngle)) {
-//     @borderwidth : tan((@borderAngle / 2)) * @borderHeight;
-//     .dib();
-//     width: 0px;
-//     height: @topWidth;
-//     border-right:   @borderHeight solid @borderColor;
-//     border-right:   @borderHeight solid @borderColor ~"\9"; // IE8
-//     border-top: @borderwidth dashed transparent;
-//     border-bottom:  @borderwidth dashed transparent;
-// }
-// .trapezoid(right, @topWidth:10px, @borderHeight:10px, @borderAngle:90deg, @borderColor:#000) when not(ispixel(@borderAngle)) {
-//     @borderwidth : tan((@borderAngle / 2)) * @borderHeight;
-//     .dib();
-//     width: 0px;
-//     height: @topWidth;
-//     border-left:   @borderHeight solid @borderColor;
-//     border-left:   @borderHeight solid @borderColor ~"\9"; // IE8
-//     border-top: @borderwidth dashed transparent;
-//     border-bottom:  @borderwidth dashed transparent;
-// }
-
-// .circle(@width:10px, @backgroundColor:#000, @borderWidth: 10px, @borderColor: #000) {
-//  .dib();
-//  width: @width;
-//  height: @width;
-//  border-radius: 50%;
-//  background-color: @backgroundColor;
-//     border-width: @borderWidth;
-//     border-color: @borderColor;
-// }
-
-// .ellipse(@width:10px, @height:20px, @angleX:0, @angleY:0, @backgroundColor:#000, @borderWidth: 10px, @borderColor: #000) {
-//     @AngleX : @angleX * 180deg;
-//     @AngleY : @angleY * 180deg;
-//     .dib();
-//     width: @width;
-//     height: @height;
-//     border-radius: 50%;
-//     background-color: @backgroundColor;
-//     border-width: @borderWidth;
-//     border-color: @borderColor;
-//     .tranSkew(@AngleX, @AngleY);
-// }
-
-
-
-
-// .star-five(@borderHeight:10px, @borderColor:#000) {
-//     @top : @borderHeight;
-//     @offsetTop : @borderHeight;
-//     @offsetLeft : tan(54deg) * @borderHeight;
-//    position: relative;
-//    top: @top;
-//     .triangle(bottom, @borderHeight, 108deg, @borderColor);
-//    &:before {
-//        content: '';
-//        position: absolute;
-//        .triangle(bottom, @borderHeight, 108deg, @borderColor);
-//        .tranRotate(70deg);
-//        top: -@offsetTop;
-//        left: -@offsetLeft;
-        
-//     }
-//     &:after {
-//        content: '';
-//        position: absolute;
-//        .triangle(bottom, @borderHeight, 108deg, @borderColor);
-//        .tranRotate(-70deg);
-//        top: -@offsetTop;
-//        left: -@offsetLeft;
-        
-//     }
-// }
-
-// .star-six(@borderHeight:10px, @borderColor:#000) {
-//     @offsetTop : @borderHeight / 3;
-//     @offsetLeft : @borderHeight * pow(3, -1/2);
-//     position: relative;
-//     .triangle(top, @borderHeight, 60deg, @borderColor);
-//     &:after {
-//         content: "";
-//         position: absolute;
-//         .triangle(bottom, @borderHeight, 60deg, @borderColor);
-//         top: @offsetTop;
-//         left: -@offsetLeft;
-//     }
-// }
-
-// .star-eight(@width:10px, @backgroundColor:#000) {
-//     @offsetTop: ( pow(2, 1/2) - 1 ) * @width / 2;
-//     position: relative;
-//     top : @offsetTop;
-//     .square(@width, @backgroundColor);
-//     &:before {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         .square(@width, @backgroundColor);
-//         .tranRotate(45deg);
-//     }
-// }
-
-// .star-twelve(@width:10px, @backgroundColor:#000) {
-//     @offsetTop : (pow(3, -1/2) * 2 - 1 ) * @width;
-//     position: relative;
-//     top: @offsetTop;
-//     .square(@width, @backgroundColor);
-//     &:before, &:after {
-//         content: "";
-//         position: absolute;
-//         top: 0;
-//         left: 0;
-//         .square(@width, @backgroundColor);
-//     }
-//     &:before {
-//         .tranRotate(30deg);
-//     }
-//     &:after {
-//         .tranRotate(60deg);
-//     }
-// }
-
 // .pentagon(@border:10px, @borderColor:#000) {
 //     @heightOfMain : sin(72deg) * @border;
 //     @heightOfSub : sin(36deg) * @border;
-//     @offsetTop : @heightOfSub + @heightOfMain;
-//     @offsetLeft : @heightOfSub / 2;
+//     @_offsetTop : @heightOfSub + @heightOfMain;
+//     @_offsetLeft : @heightOfSub / 2;
 //     position: relative;
 //     top : @heightOfSub;
-//     .trapezoid(bottom, @border, @heightOfMain, 36deg, @borderColor);
+//     .isoscelestrapezoid(bottom, @border, @heightOfMain, 36deg, @borderColor);
 //     &:before {
 //         content: "";
 //         position: absolute;
@@ -483,16 +618,6 @@
 //         border-top: 25px solid red;
 //     }
 // }
-
-// .cone(@borderHeight:10px, @borderColor:#000) {
-//   .triangle(bottom, @borderHeight, 60deg, @borderColor);
-//   .br(50%);
-// }
-
-
-
-
-
 // .Octagon() {
 
 //     width: 100px;
@@ -525,10 +650,31 @@
 //         height: 0;
 //     }
 // }
+// 
+// .circle(@width:10px, @backgroundColor:#000, @borderWidth: 10px, @borderColor: #000) {
+//  display: block;
+//  width: @width;
+//  height: @width;
+//  border-radius: 50%;
+//  background-color: @backgroundColor;
+//     border-width: @borderWidth;
+//     border-color: @borderColor;
+// }
 
-
-
-
-
-
-    
+// .ellipse(@width:10px, @height:20px, @angleX:0, @angleY:0, @backgroundColor:#000, @borderWidth: 10px, @borderColor: #000) {
+//     @AngleX : @angleX * 180deg;
+//     @AngleY : @angleY * 180deg;
+//     display: block;
+//     width: @width;
+//     height: @height;
+//     border-radius: 50%;
+//     background-color: @backgroundColor;
+//     border-width: @borderWidth;
+//     border-color: @borderColor;
+//     .tranSkew(@AngleX, @AngleY);
+// }
+// 
+// .cone(@borderheight:10px, @borderColor:#000) {
+//   .triangle(bottom, @borderheight, 60deg, @borderColor);
+//   .br(50%);
+// }
