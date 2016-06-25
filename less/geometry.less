@@ -6,7 +6,7 @@
 }
 
 
-//矩形绘制[I](IE6+)
+//矩形绘制<I>(IE6+)
 // *    宽        @width
 // *    高        @height
 // *    颜色      @color
@@ -26,7 +26,7 @@
     border-color: @color;
     border-width: @_width @_height;
 }
-//正方形绘制[I](IE6+)
+//正方形绘制<I>(IE6+)
 // *    宽        @width
 // *    颜色      @color
 .square(@width:10px, @color:#000) {
@@ -37,7 +37,7 @@
     border-width: @_width;
 }
 
-//等腰三角形绘制[I](IE6+)
+//等腰三角形绘制<I>(IE6+)
 // *    方位      top,bottom,left,right
 // *    高        @height
 // -    变宽长    @borderWidth
@@ -104,7 +104,7 @@
     border-bottom: @_borderwidth dashed transparent;
 }
 
-//直角三角形绘制[I](IE6+)
+//直角三角形绘制<I>(IE6+)
 // *    方位      top-right,top-left,bottom-right,bottom-left,left-top,left-bottom,right-top,right-bottom
 // *    高        @height
 // -    变宽长    @borderWidth
@@ -215,7 +215,7 @@
     border-bottom: @_borderwidth dashed transparent;
 }
 
-//等腰梯形绘制[I](IE6+)
+//等腰梯形绘制<I>(IE6+)
 // *    方位      top,bottom,left,right
 // *    高        @height
 // *    顶边长    @topWidth
@@ -287,7 +287,7 @@
     border-bottom:  @_borderWidth dashed transparent;
 }
 
-//直角梯形绘制[I](IE6+)
+//直角梯形绘制<I>(IE6+)
 // *    方位     top,bottom,left,right
 // *    高       @height
 // *    顶边长   @topWidth
@@ -375,7 +375,7 @@
     border-bottom:  @borderwidth dashed transparent;
 }
 
-//三角形绘制[II](IE9+,^IE6+)
+//三角形绘制<II>(IE9+,^IE6+)
 // *    类型     ASA
 // *    左角     @leftAngle
 // *    底边长   @bottomSide
@@ -432,7 +432,7 @@
     }
 }
 
-//五角星绘制[III](IE9+)
+//五角星绘制<III>(IE9+)
 // *    三角形的高  @height
 // *    颜色        @color
 .star-five(@height:10px, @color:#000) {
@@ -460,7 +460,7 @@
     }
 }
 
-//六角星绘制[II](IE9+)
+//六角星绘制<II>(IE9+)
 // *    三角形的高   @height
 // *    颜色         @color
 .star-six(@height:20px, @color:#000) {
@@ -477,7 +477,7 @@
     }
 }
 
-//八角星绘制[II](IE9+)
+//八角星绘制<II>(IE9+)
 // *    矩形的高    @height
 // *    颜色        @color
 .star-eight(@height:20px, @color:#000) {
@@ -496,7 +496,7 @@
     }
 }
 
-//十二角星绘制[III](IE9+)
+//十二角星绘制<III>(IE9+)
 // *    矩形的高    @height
 // *    颜色        @color
 .star-twelve(@height:20px, @color:#000) {
@@ -520,7 +520,7 @@
     }
 }
 
-//五边形绘制[II](IE9+)
+//五边形绘制<II>(IE9+)
 // *    边长      @border
 // *    颜色      @color
 .border-five(@border:10px, @color:#000) {
@@ -540,7 +540,7 @@
     }
 }
 
-//六边形绘制[II](IE9+)
+//六边形绘制<II>(IE9+)
 // *    边长      @border
 // *    颜色      @color
 .border-six(@border:10px, @color:#000) {
@@ -557,7 +557,7 @@
     }
 }
 
-//八边形绘制[III](IE9+)
+//八边形绘制<III>(IE9+)
 // *    边长      @border
 // *    颜色      @color
 .border-eight(@border:10px, @color:#000) {
@@ -584,7 +584,7 @@
     }
 }
 
-//圆形绘制[I](IE9+)
+//圆形绘制<I>(IE9+)
 // *    半径      @radius
 // *    颜色      @color
 .circle(@radius:10px, @color:#000) {
@@ -595,17 +595,138 @@
     border-color: @color;
 }
 
-//1/4扇形绘制[I](IE9+)
+//1/4圆形绘制<I>(IE9+)
+// *    方位      top,bottom,left,right
 // *    半径      @radius
 // *    颜色      @color
-.oneinfourcircle(@radius:10px, @color:#000) {
+.quarterCircular(top,@radius:10px, @color:#000) {
     .base();
-    border-style: solid;
     border-radius: @radius;
-    border-width: @radius;
-    border-color: @color transparent transparent;
+    border-top: @radius solid @color;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid transparent;
+    border-left: @radius solid transparent;
+}
+.quarterCircular(bottom,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid @color;
+    border-right: @radius solid transparent;
+    border-left: @radius solid transparent;
+}
+.quarterCircular(left,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid transparent;
+    border-left: @radius solid @color;
+}
+.quarterCircular(right,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid @color;
+    border-left: @radius solid transparent;
 }
 
+//半圆形绘制<I>(IE9+)
+// *    方位      top-right,bottom,left,right
+// *    半径      @radius
+// *    颜色      @color
+.halfCircular(top-right,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid @color;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid @color;
+    border-left: @radius solid transparent;
+}
+.halfCircular(top-left,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid @color;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid transparent;
+    border-left: @radius solid @color;
+}
+.halfCircular(bottom-right,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid @color;
+    border-right: @radius solid @color;
+    border-left: @radius solid transparent;
+}
+.halfCircular(bottom-left,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid @color;
+    border-right: @radius solid transparent;
+    border-left: @radius solid @color;
+}
+.halfCircular(left-top,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid @color;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid transparent;
+    border-left: @radius solid @color;
+}
+.halfCircular(left-bottom,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid @color;
+    border-right: @radius solid transparent;
+    border-left: @radius solid @color;
+}
+.halfCircular(right-top,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid @color;
+    border-bottom: @radius solid transparent;
+    border-right: @radius solid @color;
+    border-left: @radius solid transparent;
+}
+.halfCircular(right-bottom,@radius:10px, @color:#000) {
+    .base();
+    border-radius: @radius;
+    border-top: @radius solid transparent;
+    border-bottom: @radius solid @color;
+    border-right: @radius solid @color;
+    border-left: @radius solid transparent;
+}
+
+
+//心形绘制<III>(IE9+)
+// *    宽        @border
+// *    颜色      @color
+.heart(@border:10px, @color:#000) {
+    @_radius: round(@border / 2);
+    @_offset:@border - 1px;
+    .tranRotate(45deg);
+    .square(@border, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top: -@_radius;
+        left: -@_offset;
+        .tranRotate(-45deg);
+        .halfCircular(top-left, @_radius, @color);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: -@_offset;
+        left: -@_radius;
+        .tranRotate(-45deg);
+        .halfCircular(top-right, @_radius, @color);
+    }
+}
 
 
 
