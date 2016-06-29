@@ -5,7 +5,7 @@
 // *    右角     @rightAngle
 // *    颜色     @color
 // *    背景颜色 @backgroundColor
-.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 90deg) and (@rightAngle < 180deg) {
+.bico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 90deg) and (@rightAngle < 180deg) {
     @_height : round(@bottomSide / ( (1/tan(@leftAngle)) - (1/tan(180deg-@rightAngle))));
     @_mainWidth : round(@_height / tan(@leftAngle));
     @_subWidth : round(@_height / tan(180deg-@rightAngle));
@@ -18,13 +18,13 @@
         .rightTriangle(top-left, @_height, @_subWidth, @backgroundColor);
     }
 }
-.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle = 90deg) {
+.bico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle = 90deg) {
     @_height : round(@bottomSide / ( (1/tan(@leftAngle)) - (1/tan(180deg-@rightAngle))));
     @_mainWidth : round(@_height / tan(@leftAngle));
     position: relative;
     .rightTriangle(top-left, @_height, @_mainWidth, @color);
 }
-.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+.bico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
     @_height : round(@bottomSide / ( (1/tan(@leftAngle)) + (1/tan(@rightAngle))));
     @_mainWidth : round(@_height / tan(@leftAngle));
     @_subWidth : round(@_height / tan(@rightAngle));
@@ -36,13 +36,13 @@
         .rightTriangle(top-right, @_height, @_subWidth, @color);
     }
 }
-.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle = 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+.bico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle = 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
     @_height : round(@bottomSide / ( (1/tan(@leftAngle)) + (1/tan(@rightAngle))));
     @_mainWidth : round(@_height / tan(@leftAngle));
     position: relative;
     .rightTriangle(top-left, @_height, @_mainWidth, @color);
 }
-.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 90deg) and (@leftAngle < 180deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+.bico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 90deg) and (@leftAngle < 180deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
     @_height : round(@bottomSide / ( (1/tan(@rightAngle)) - (1/tan(180deg - @leftAngle))));
     @_mainWidth : round(@_height / tan(@rightAngle));
     @_subWidth : round(@_height / tan(180deg-@leftAngle));
@@ -58,7 +58,7 @@
 //五角星绘制{III}(IE9+)
 // *    三角形的高  @height
 // *    颜色        @color
-.ico-star-five(@height:10px, @color:#000) {
+.bico-star-five(@height:10px, @color:#000) {
     @_top : @height;
     @_offsetTop : @height;
     @_offsetLeft : round(tan(54deg) * @height);
@@ -86,7 +86,7 @@
 //六角星绘制{II}(IE9+)
 // *    三角形的高   @height
 // *    颜色         @color
-.ico-star-six(@height:20px, @color:#000) {
+.bico-star-six(@height:20px, @color:#000) {
     @_offsetTop : round(@height / 3);
     @_offsetLeft : round(@height * pow(3, -1/2));
     position: relative;
@@ -103,7 +103,7 @@
 //八角星绘制{II}(IE9+)
 // *    矩形的高    @height
 // *    颜色        @color
-.ico-star-eight(@height:20px, @color:#000) {
+.bico-star-eight(@height:20px, @color:#000) {
     @_offsetTop: round(( pow(2, 1/2) - 1 ) * @height / 2);
     @_offsetLeft: @height/2;
     position: relative;
@@ -122,7 +122,7 @@
 //十二角星绘制{III}(IE9+)
 // *    矩形的高    @height
 // *    颜色        @color
-.ico-star-twelve(@height:20px, @color:#000) {
+.bico-star-twelve(@height:20px, @color:#000) {
     @_offsetTop : round((pow(3, -1/2) * 2 - 1 ) * @height);
     @_offsetLeft: @height/2;
     position: relative;
@@ -146,7 +146,7 @@
 //五边形绘制{II}(IE9+)
 // *    边长      @border
 // *    颜色      @color
-.ico-border-five(@border:10px, @color:#000) {
+.bico-border-five(@border:10px, @color:#000) {
     @_mainHeight : round(sin(72deg) * @border);
     @_subHeight : round(sin(36deg) * @border);
     @_offsetTop : round(@_mainHeight + @_subHeight);
@@ -166,7 +166,7 @@
 //六边形绘制{II}(IE9+)
 // *    边长      @border
 // *    颜色      @color
-.ico-border-six(@border:10px, @color:#000) {
+.bico-border-six(@border:10px, @color:#000) {
     @_height: round(cos(30deg) * @border);
     @_offsetLeft: round(sin(30deg) * @border);
     position: relative;
@@ -183,7 +183,7 @@
 //八边形绘制{III}(IE9+)
 // *    边长      @border
 // *    颜色      @color
-.ico-border-eight(@border:10px, @color:#000) {
+.bico-border-eight(@border:10px, @color:#000) {
     @_mainWidth: round(@border + 2 * sin(30deg) * @border);
     @_subHeight: round(cos(30deg) * @border);
     @_offsetTop: @_subHeight + @border / 2;
@@ -210,7 +210,7 @@
 //心形绘制{III}(IE9+)
 // *    宽        @border
 // *    颜色      @color
-.ico-heart(@border:10px, @color:#000) {
+.bico-heart(@border:10px, @color:#000) {
     @_radius: round(@border / 2);
     @_offset:@border - 1px;
     .tranRotate(45deg);
@@ -236,7 +236,7 @@
 //阴阳图绘制{III}(IE9+)
 // *    半径        @@radius
 // *    颜色      @color
-.ico-yin-yang(@radius:40px, @color:#000) {
+.bico-yin-yang(@radius:40px, @color:#000) {
     @_width: @radius * 2 - 4px;
     @_height: @radius - 2px;
     @_smallRadius: @_width * 1 / 10;
@@ -275,4 +275,27 @@
         border: @_smallBorder solid #fff;
         border-radius:100%;
     }
+}
+
+
+//
+.bico-laba() {
+    width: 20px;
+    height: 20px;
+    display:inline-block;
+    -webkit-background-origin:content-box; /* Safari */
+    background-origin:content-box;
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,000000+50,000000+100 */
+    background: rgb(255,255,255); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0,0,0,1)), color-stop(0.50, rgba(0,0,0,1)), color-stop(0.50, rgba(255,255,255,1)), to(rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right,rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+    border-right: 14px solid #000;
+    border-right: 14px solid #000 ~"\9"; // IE8
+    border-top: 14px dashed #fff;
+    border-bottom: 14px dashed #fff; 
 }
