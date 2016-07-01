@@ -11,7 +11,19 @@
     border-left: @bdWidth solid @bdColor;
     border-right: @bdWidth solid @bdColor;
 }
-
+//矩形绘制{I}(IE6+)
+// *    宽        @width
+// *    高        @height
+// *    颜色      @color
+.square(@width:10px, @color:#000, @bdWidth:10px, @bdColor:#000) when (ispixel(@height)) {
+    width:@width;
+    height:@width;
+    background-color: @color;
+    border-top: @bdWidth solid @bdColor;
+    border-bottom: @bdWidth solid @bdColor;
+    border-left: @bdWidth solid @bdColor;
+    border-right: @bdWidth solid @bdColor;
+}
 //三角形绘制{II}(IE9+,^IE6+)
 // *    类型     ASA
 // *    左角     @leftAngle
