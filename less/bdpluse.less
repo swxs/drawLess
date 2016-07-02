@@ -2,7 +2,7 @@
 // *    宽        @width
 // *    高        @height
 // *    颜色      @color
-.rect(@width:10px, @height:10px, @color:#000, @bdWidth:10px, @bdHeight:10px, @bdColor:#000) when (ispixel(@height)) {
+.bico-rect(@width:10px, @height:10px, @color:#000, @bdWidth:10px, @bdHeight:10px, @bdColor:#000) when (ispixel(@height)) {
     width:@width;
     height:@height;
     background-color: @color;
@@ -15,7 +15,7 @@
 // *    宽        @width
 // *    高        @height
 // *    颜色      @color
-.square(@width:10px, @color:#000, @bdWidth:10px, @bdColor:#000) when (ispixel(@height)) {
+.bico-square(@width:10px, @color:#000, @bdWidth:10px, @bdColor:#000) {
     width:@width;
     height:@width;
     background-color: @color;
@@ -326,3 +326,48 @@
         -webkit-background-clip:content-box; /* Safari */
     background-clip:content-box;
 }
+
+.bico-infinity() {
+    position: relative;
+    width: 212px;
+    height: 100px;
+   &:before,
+   &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        border: 20px solid red;
+        -moz-border-radius: 50px 50px 0 50px;
+             border-radius: 50px 50px 0 50px;
+        -webkit-transform: rotate(-45deg);
+           -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+             -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+
+   &:after {
+        left: auto;
+        right: 0;
+        -moz-border-radius: 50px 50px 50px 0;
+             border-radius: 50px 50px 50px 0;
+        -webkit-transform: rotate(45deg);
+           -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+}
+
+.bico-eggs() {
+display:block;
+   width: 126px;
+   height: 180px;
+   background-color: red;
+   -webkit-border-radius: 63px 63px 63px 63px ~"/" 108px 108px 72px 72px;
+   border-radius:         50%  50%  50%  50%  ~"/" 60%   60%   40%  40%;
+}
+

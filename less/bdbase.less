@@ -575,3 +575,24 @@
     border-left: @radius solid @color;
 }
 
+//椭圆形绘制{I}(IE9+)
+// *    半径      @radius
+// *    颜色      @color
+.ellipse(n,@radius-mian:10px, @radius:10px, @color:#000) {
+    .base(0px, 0px);
+    border-style: solid;
+    border-radius: @radius-mian ~"/" @radius;
+    border-width: @radius @radius-mian;
+    border-color: @color;
+}
+
+//椭圆形绘制{I}(IE9+)
+// *    半径      @radius
+// *    颜色      @color
+.ellipse(s,@width:10px, @radius:10px, @color:#000) {
+    .base(0px, 0px);
+    border-style: solid;
+    border-radius: @width @radius;
+    border-width: @width;
+    border-color: @color;
+} 
