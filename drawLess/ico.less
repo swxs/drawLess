@@ -1,0 +1,160 @@
+.ico_base() {
+	display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    font-style: normal;
+    color: #ddd;
+    text-align: left;
+    text-indent: -9999px;
+    direction: ltr;
+	&:after, &:before {
+	    content: '';
+	    pointer-events: none;
+	}
+}
+.ico_home() {
+	.ico_base();
+	width: 22px;
+    height: 16px;
+    border-top: none;
+    margin: 15px 6px 3px;
+    border:2px solid white;
+    border-top-color: transparent;
+    &:before {
+    	width: 20px;
+    	height: 20px;
+    	-webkit-transform: rotate(45deg);
+    	-ms-transform: rotate(45deg);
+    	transform: rotate(45deg);
+    	position: absolute;
+    	left: -1px;
+    	top: -11px;
+    	border:2px solid;
+    	border-right-color: transparent;
+    	border-bottom-color: transparent;
+    }
+    &:after {
+    	width: 6px;
+    	height: 10px;
+    	bottom: 0;
+    	position: absolute;
+    	left: 55%;
+    	border:1px solid white;
+    	-webkit-transform: translateX(-50%);
+    	-ms-transform: translateX(-50%);
+    	transform: translateX(-50%);
+    	border-width: 1px;
+    	border-bottom: none;
+    }
+}
+//阴阳图绘制{III}(IE9+)
+// *    半径        @@radius
+// *    颜色      @color
+.bico-yin-yang(@radius:40px, @color:#000) {
+    @_width: @radius * 2 - 4px;
+    @_height: @radius - 2px;
+    @_smallRadius: @_width * 1 / 10;
+    @_smallBorder: @_width * 4 / 20;
+    display:block;
+    width: @_width;
+    height: @_height;
+    position: relative;
+    background: #fff;
+    border-color: @color;
+    border-style: solid;
+    border-width: 2px 2px @radius 2px;
+    border-radius: 100%;
+    &:before {
+        content: "";
+        display:block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: @_smallRadius;
+        height: @_smallRadius;
+        background: #fff;
+        border: @_smallBorder solid @color;
+        border-radius: 100%;
+        
+    }
+    &:after {
+        content: "";
+        display:block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: @_smallRadius;
+        height: @_smallRadius;
+        background: @color;
+        border: @_smallBorder solid #fff;
+        border-radius:100%;
+    }
+}
+
+
+//
+.bico-laba() {
+    width: 20px;
+    height: 20px;
+    display:inline-block;
+
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+0,ffffff+50,000000+50,000000+100 */
+    background: rgb(255,255,255); /* Old browsers */ /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(rgba(0,0,0,1)), color-stop(0.50, rgba(0,0,0,1)), color-stop(0.50, rgba(255,255,255,1)), to(rgba(255,255,255,1)));
+    background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: -o-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%);
+    background: linear-gradient(to right,rgba(0,0,0,1) 0%, rgba(0,0,0,1) 50%, rgba(255,255,255,1) 50%, rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+
+    border-right: 14px solid #000;
+    border-right: 14px solid #000 ~"\9"; // IE8
+    border-top: 14px dashed transparent;
+    border-bottom: 14px dashed transparent; 
+        -webkit-background-clip:content-box; /* Safari */
+    background-clip:content-box;
+}
+
+.bico-infinity() {
+    position: relative;
+    width: 212px;
+    height: 100px;
+   &:before,
+   &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 60px;
+        height: 60px;
+        border: 20px solid red;
+        -moz-border-radius: 50px 50px 0 50px;
+             border-radius: 50px 50px 0 50px;
+        -webkit-transform: rotate(-45deg);
+           -moz-transform: rotate(-45deg);
+            -ms-transform: rotate(-45deg);
+             -o-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+    }
+
+   &:after {
+        left: auto;
+        right: 0;
+        -moz-border-radius: 50px 50px 50px 0;
+             border-radius: 50px 50px 50px 0;
+        -webkit-transform: rotate(45deg);
+           -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+             -o-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+}
+
+.bico-eggs() {
+display:block;
+   width: 126px;
+   height: 180px;
+   background-color: red;
+   -webkit-border-radius: 63px 63px 63px 63px ~"/" 108px 108px 72px 72px;
+   border-radius:         50%  50%  50%  50%  ~"/" 60%   60%   40%  40%;
+}

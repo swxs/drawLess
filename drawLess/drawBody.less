@@ -1,0 +1,26 @@
+//矩形绘制{I}(IE6+)
+// *    宽        @width
+// *    高        @height
+// *    颜色      @color
+.ico-rect(@width:10px, @height:10px, @color:#000, @bdWidth:10px, @bdHeight:10px, @bdColor:#000) when (ispixel(@height)) {
+    width:@width;
+    height:@height;
+    background-color: @color;
+    border-top: @bdHeight solid @bdColor;
+    border-bottom: @bdHeight solid @bdColor;
+    border-left: @bdWidth solid @bdColor;
+    border-right: @bdWidth solid @bdColor;
+}
+//矩形绘制{I}(IE6+)
+// *    宽        @width
+// *    高        @height
+// *    颜色      @color
+.ico-square(@width:10px, @color:#000, @bdWidth:10px, @bdColor:#000) {
+    width:@width;
+    height:@width;
+    background-color: @color;
+    border-top: @bdWidth solid @bdColor;
+    border-bottom: @bdWidth solid @bdColor;
+    border-left: @bdWidth solid @bdColor;
+    border-right: @bdWidth solid @bdColor;
+}

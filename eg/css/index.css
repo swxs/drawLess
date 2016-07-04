@@ -1,0 +1,599 @@
+html {
+  font-size: 625%;
+}
+body {
+  font-size: 0;
+}
+div {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  width: 12.5%;
+  height: 1rem;
+  border: 1px solid #eaeaea;
+}
+/*db_base*/
+i {
+  display: inline-block;
+  width: 0px;
+  height: 0px;
+}
+.test1 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 20px 10px;
+}
+.test2 {
+  border-style: solid;
+  border-color: #000000;
+  border-width: 10px;
+}
+.test3 {
+  border-style: solid;
+  border-radius: 10px;
+  border-width: 10px;
+  border-color: #000000;
+}
+.test4 {
+  border-style: solid;
+  border-radius: 30px / 20px;
+  border-width: 20px 30px;
+  border-color: #000000;
+}
+.test5 {
+  border-style: solid;
+  border-radius: 40px 10px;
+  border-width: 10px;
+  border-color: #000000;
+}
+.test6 {
+  border-style: solid;
+  border-radius: 10px 40px;
+  border-width: 10px;
+  border-color: #000000;
+}
+.test7 {
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-right: 17px dashed transparent;
+  border-left: 2px dashed transparent;
+}
+.test8 {
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-right: 17px dashed transparent;
+  border-left: 2px dashed transparent;
+}
+.test9 {
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-right: 10px dashed transparent;
+  border-left: 10px dashed transparent;
+}
+.test10 {
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-top: 10px dashed transparent;
+  border-bottom: 10px dashed transparent;
+}
+.test11 {
+  border-left: 10px solid #000000;
+  border-left: 10px solid #000000 \9;
+  border-top: 10px dashed transparent;
+  border-bottom: 10px dashed transparent;
+}
+.test12 {
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 10px dashed transparent;
+  border-left: 10px dashed transparent;
+}
+.test13 {
+  border-bottom: 50px solid #000000;
+  border-bottom: 50px solid #000000 \9;
+  border-right: 13px dashed transparent;
+  border-left: 13px dashed transparent;
+}
+.test14 {
+  border-right: 50px solid #000000;
+  border-right: 50px solid #000000 \9;
+  border-top: 13px dashed transparent;
+  border-bottom: 13px dashed transparent;
+}
+.test15 {
+  border-left: 50px solid #000000;
+  border-left: 50px solid #000000 \9;
+  border-top: 13px dashed transparent;
+  border-bottom: 13px dashed transparent;
+}
+.test16 {
+  border-top: 50px solid #000000;
+  border-top: 50px solid #000000 \9;
+  border-right: 13px dashed transparent;
+  border-left: 13px dashed transparent;
+}
+.test17 {
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-right: 10px dashed transparent;
+}
+.test18 {
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-left: 10px dashed transparent;
+}
+.test19 {
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 10px dashed transparent;
+}
+.test20 {
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-left: 10px dashed transparent;
+}
+.test21 {
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-top: 10px dashed transparent;
+}
+.test22 {
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-bottom: 10px dashed transparent;
+}
+.test23 {
+  border-left: 30px solid #000000;
+  border-left: 30px solid #000000 \9;
+  border-top: 17px dashed transparent;
+}
+.test24 {
+  border-left: 30px solid #000000;
+  border-left: 30px solid #000000 \9;
+  border-bottom: 17px dashed transparent;
+}
+.test25 {
+  border-bottom: 30px solid #000000;
+  border-bottom: 30px solid #000000 \9;
+  border-right: 17px dashed transparent;
+}
+.test26 {
+  border-bottom: 30px solid #000000;
+  border-bottom: 30px solid #000000 \9;
+  border-left: 17px dashed transparent;
+}
+.test27 {
+  border-top: 30px solid #000000;
+  border-top: 30px solid #000000 \9;
+  border-right: 17px dashed transparent;
+}
+.test28 {
+  border-top: 30px solid #000000;
+  border-top: 30px solid #000000 \9;
+  border-left: 17px dashed transparent;
+}
+.test29 {
+  border-right: 30px solid #000000;
+  border-right: 30px solid #000000 \9;
+  border-top: 17px dashed transparent;
+}
+.test30 {
+  border-right: 30px solid #000000;
+  border-right: 30px solid #000000 \9;
+  border-bottom: 17px dashed transparent;
+}
+.test31 {
+  border-left: 30px solid #000000;
+  border-left: 30px solid #000000 \9;
+  border-top: 17px dashed transparent;
+}
+.test32 {
+  border-left: 30px solid #000000;
+  border-left: 30px solid #000000 \9;
+  border-bottom: 17px dashed transparent;
+}
+.test33 {
+  border-right: 0px dashed transparent;
+  border-left: 0px dashed transparent;
+  width: 10px;
+  border-bottom: 30px solid #000000;
+  border-bottom: 30px solid #000000 \9;
+  border-right: 30px dashed transparent;
+  border-left: 30px dashed transparent;
+}
+.test34 {
+  border-right: 0px dashed transparent;
+  border-left: 0px dashed transparent;
+  width: 10px;
+  border-top: 30px solid #000000;
+  border-top: 30px solid #000000 \9;
+  border-right: 30px dashed transparent;
+  border-left: 30px dashed transparent;
+}
+.test35 {
+  border-top: 0px dashed transparent;
+  border-bottom: 0px dashed transparent;
+  height: 10px;
+  border-left: 30px solid #000000;
+  border-left: 30px solid #000000 \9;
+  border-top: 30px dashed transparent;
+  border-bottom: 30px dashed transparent;
+}
+.test36 {
+  border-top: 0px dashed transparent;
+  border-bottom: 0px dashed transparent;
+  height: 10px;
+  border-right: 30px solid #000000;
+  border-right: 30px solid #000000 \9;
+  border-top: 30px dashed transparent;
+  border-bottom: 30px dashed transparent;
+}
+.test37 {
+  width: 10px;
+  border-bottom: 30px solid #000000;
+  border-bottom: 30px solid #000000 \9;
+  border-right: 8px dashed transparent;
+  border-left: 8px dashed transparent;
+}
+.test38 {
+  width: 10px;
+  border-top: 30px solid #000000;
+  border-top: 30px solid #000000 \9;
+  border-right: 8px dashed transparent;
+  border-left: 8px dashed transparent;
+}
+.test39 {
+  height: 10px;
+  border-left: 30px solid #000000;
+  border-left: 30px solid #000000 \9;
+  border-top: 8px dashed transparent;
+  border-bottom: 8px dashed transparent;
+}
+.test40 {
+  height: 10px;
+  border-right: 30px solid #000000;
+  border-right: 30px solid #000000 \9;
+  border-top: 8px dashed transparent;
+  border-bottom: 8px dashed transparent;
+}
+.test41 {
+  width: 10px;
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-right: 30px dashed transparent;
+}
+.test42 {
+  width: 10px;
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-left: 30px dashed transparent;
+}
+.test43 {
+  width: 10px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 30px dashed transparent;
+}
+.test44 {
+  width: 10px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-left: 30px dashed transparent;
+}
+.test45 {
+  height: 10px;
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-top: 30px dashed transparent;
+}
+.test46 {
+  height: 10px;
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-bottom: 30px dashed transparent;
+}
+.test47 {
+  height: 10px;
+  border-left: 10px solid #000000;
+  border-left: 10px solid #000000 \9;
+  border-top: 30px dashed transparent;
+}
+.test48 {
+  height: 10px;
+  border-left: 10px solid #000000;
+  border-left: 10px solid #000000 \9;
+  border-bottom: 30px dashed transparent;
+}
+.test49 {
+  border-right: 0px dashed transparent;
+  width: 10px;
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-right: 10px dashed transparent;
+}
+.test50 {
+  border-left: 0px dashed transparent;
+  width: 10px;
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-left: 10px dashed transparent;
+}
+.test51 {
+  border-right: 0px dashed transparent;
+  width: 10px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 10px dashed transparent;
+}
+.test52 {
+  border-left: 0px dashed transparent;
+  width: 10px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-left: 10px dashed transparent;
+}
+.test53 {
+  border-top: 0px dashed transparent;
+  height: 10px;
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-top: 10px dashed transparent;
+}
+.test54 {
+  border-bottom: 0px dashed transparent;
+  height: 10px;
+  border-right: 10px solid #000000;
+  border-right: 10px solid #000000 \9;
+  border-bottom: 10px dashed transparent;
+}
+.test55 {
+  border-top: 0px dashed transparent;
+  height: 10px;
+  border-left: 10px solid #000000;
+  border-left: 10px solid #000000 \9;
+  border-top: 10px dashed transparent;
+}
+.test56 {
+  border-bottom: 0px dashed transparent;
+  height: 10px;
+  border-left: 10px solid #000000;
+  border-left: 10px solid #000000 \9;
+  border-bottom: 10px dashed transparent;
+}
+.test57 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.test58 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.test59 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.test60 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+.test61 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid #000000;
+  border-left: 10px solid #000000;
+}
+.test62 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #000000;
+  border-left: 10px solid #000000;
+}
+.test63 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+.test64 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.test65 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+.test66 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.test67 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+.test68 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.test69 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.test70 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid transparent;
+  border-left: 10px solid #000000;
+}
+.test71 {
+  border-radius: 10px;
+  border-top: 10px solid #000000;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+.test72 {
+  border-radius: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid #000000;
+  border-right: 10px solid #000000;
+  border-left: 10px solid transparent;
+}
+.test81 {
+  position: relative;
+  border-bottom: 10px solid #000000;
+  border-bottom: 10px solid #000000 \9;
+  border-left: 27px dashed transparent;
+}
+.test81:before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  border-bottom: 10px solid #ffffff;
+  border-bottom: 10px solid #ffffff \9;
+  border-left: 8px dashed transparent;
+}
+.test82 {
+  position: relative;
+  border-bottom: 16px solid #000000;
+  border-bottom: 16px solid #000000 \9;
+  border-left: 44px dashed transparent;
+}
+.test82:before {
+  content: '';
+  position: absolute;
+  border-bottom: 16px solid #000000;
+  border-bottom: 16px solid #000000 \9;
+  border-right: 28px dashed transparent;
+}
+.test83 {
+  position: relative;
+  border-bottom: 17px solid #000000;
+  border-bottom: 17px solid #000000 \9;
+  border-right: 29px dashed transparent;
+}
+.test83:before {
+  content: '';
+  position: absolute;
+  border-bottom: 17px solid #ffffff;
+  border-bottom: 17px solid #ffffff \9;
+  border-right: 10px dashed transparent;
+}
+.test84 {
+  position: relative;
+  border-bottom: 20px solid #000000;
+  border-bottom: 20px solid #000000 \9;
+  border-right: 12px dashed transparent;
+  border-left: 12px dashed transparent;
+}
+.test84:after {
+  content: "";
+  position: absolute;
+  border-top: 20px solid #000000;
+  border-top: 20px solid #000000 \9;
+  border-right: 12px dashed transparent;
+  border-left: 12px dashed transparent;
+  top: 7px;
+  left: -12px;
+}
+.test85 {
+  position: relative;
+  top: 12px;
+  width: 20px;
+  border-top: 19px solid #000000;
+  border-top: 19px solid #000000 \9;
+  border-right: 6px dashed transparent;
+  border-left: 6px dashed transparent;
+}
+.test85:before {
+  content: "";
+  position: absolute;
+  top: -31px;
+  left: -6px;
+  border-bottom: 12px solid #000000;
+  border-bottom: 12px solid #000000 \9;
+  border-right: 17px dashed transparent;
+  border-left: 17px dashed transparent;
+}
+.test86 {
+  position: relative;
+  width: 20px;
+  border-bottom: 17px solid #000000;
+  border-bottom: 17px solid #000000 \9;
+  border-right: 10px dashed transparent;
+  border-left: 10px dashed transparent;
+}
+.test86:before {
+  content: "";
+  position: absolute;
+  top: 17px;
+  left: -10px;
+  width: 20px;
+  border-top: 17px solid #000000;
+  border-top: 17px solid #000000 \9;
+  border-right: 10px dashed transparent;
+  border-left: 10px dashed transparent;
+}
+.test87 {
+  position: relative;
+  top: 14px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 8px 16px;
+}
+.test87:before {
+  content: "";
+  position: absolute;
+  top: -22px;
+  left: -16px;
+  width: 16px;
+  border-bottom: 14px solid #000000;
+  border-bottom: 14px solid #000000 \9;
+  border-right: 8px dashed transparent;
+  border-left: 8px dashed transparent;
+}
+.test87:after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: -16px;
+  width: 16px;
+  border-top: 14px solid #000000;
+  border-top: 14px solid #000000 \9;
+  border-right: 8px dashed transparent;
+  border-left: 8px dashed transparent;
+}
