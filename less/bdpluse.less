@@ -81,6 +81,23 @@
     }
 }
 
+//菱形{II}(IE9+)
+//*     宽           @width
+//*     高           @height
+//*     颜色         @color
+.bico-star-four(@width:10px,@height:10px,@color:#000) {
+    @_width : round(@width/2);
+    @_height : round(@height/2);
+    position: relative;
+    .isoscelesTriangle(top, @_height, @_width, @color);
+    &:before {
+        content:'';
+        position:absolute;
+        top: -@_height;
+        .isoscelesTriangle(bottom, @_height, @_width, @color);
+    }
+}
+
 //五角星绘制{III}(IE9+)
 // *    三角形的高  @height
 // *    颜色        @color
