@@ -1,0 +1,259 @@
+@import "drawBorder";
+//三角形绘制{II}(IE9+,^IE6+)
+// *    类型     ASA
+// *    左角     @leftAngle
+// *    底边长   @bottomSide
+// *    右角     @rightAngle
+// *    颜色     @color
+// *    背景颜色 @backgroundColor
+.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 90deg) and (@rightAngle < 180deg) {
+    @_height : round(@bottomSide / ( (1/tan(@leftAngle)) - (1/tan(180deg-@rightAngle))));
+    @_mainWidth : round(@_height / tan(@leftAngle));
+    @_subWidth : round(@_height / tan(180deg-@rightAngle));
+    position: relative;
+    .db_RTTriangle(top-left, @_height, @_mainWidth, @color);
+    &:before {
+        content: '';
+        position: absolute;
+        left: -@_subWidth;
+        .db_RTTriangle(top-left, @_height, @_subWidth, @backgroundColor);
+    }
+}
+.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle = 90deg) {
+    @_height : round(@bottomSide / ( (1/tan(@leftAngle)) - (1/tan(180deg-@rightAngle))));
+    @_mainWidth : round(@_height / tan(@leftAngle));
+    position: relative;
+    .db_RTTriangle(top-left, @_height, @_mainWidth, @color);
+}
+.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 0deg) and (@leftAngle < 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+    @_height : round(@bottomSide / ( (1/tan(@leftAngle)) + (1/tan(@rightAngle))));
+    @_mainWidth : round(@_height / tan(@leftAngle));
+    @_subWidth : round(@_height / tan(@rightAngle));
+    position: relative;
+    .db_RTTriangle(top-left, @_height, @_mainWidth, @color);
+    &:before {
+        content: '';
+        position: absolute;
+        .db_RTTriangle(top-right, @_height, @_subWidth, @color);
+    }
+}
+.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle = 90deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+    @_height : round(@bottomSide / ( (1/tan(@leftAngle)) + (1/tan(@rightAngle))));
+    @_mainWidth : round(@_height / tan(@leftAngle));
+    position: relative;
+    .db_RTTriangle(top-left, @_height, @_mainWidth, @color);
+}
+.ico-triangle(ASA, @leftAngle, @bottomSide:10px, @rightAngle, @color:#000, @backgroundColor:#fff) when (@leftAngle > 90deg) and (@leftAngle < 180deg) and (@rightAngle > 0deg) and (@rightAngle < 90deg) {
+    @_height : round(@bottomSide / ( (1/tan(@rightAngle)) - (1/tan(180deg - @leftAngle))));
+    @_mainWidth : round(@_height / tan(@rightAngle));
+    @_subWidth : round(@_height / tan(180deg-@leftAngle));
+    position: relative;
+    .db_RTTriangle(top-right, @_height, @_mainWidth, @color);
+    &:before {
+        content: '';
+        position: absolute;
+        .db_RTTriangle(top-right, @_height, @_subWidth, @backgroundColor);
+    }
+}
+
+//菱形{II}(IE9+)
+//*     宽           @width
+//*     高           @height
+//*     颜色         @color
+.ico-star-four(@width:26px,@height:26px,@color:#000) {
+    @_width : round(@width/2);
+    @_height : round(@height/2);
+    position: relative;
+    .db_EQTriangle(top, @_height, @_width, @color);
+    &:before {
+        content:'';
+        position:absolute;
+        top: @_height;
+        left: -@_width;
+        .db_EQTriangle(bottom, @_height, @_width, @color);
+    }
+}
+
+//五角星绘制{III}(IE9+)
+// *    三角形的高  @height
+// *    颜色        @color
+.ico-star-five(@height:10px, @color:#000) {
+    @_top : @height;
+    @_offsetTop : @height;
+    @_offsetLeft : round(tan(54deg) * @height);
+    position: relative;
+    top: @_top;
+    .db_EQTriangle(bottom, @height, 108deg, @color);
+   &:before {
+       content: '';
+       position: absolute;
+       top: -@_offsetTop;
+       left: -@_offsetLeft;
+       .db_EQTriangle(bottom, @height, 108deg, @color);
+       .tranRotate(70deg);
+    }
+    &:after {
+       content: '';
+       position: absolute;
+       top: -@_offsetTop;
+       left: -@_offsetLeft;
+       .db_EQTriangle(bottom, @height, 108deg, @color);
+       .tranRotate(-70deg);
+    }
+}
+
+//六角星绘制{II}(IE9+)
+// *    三角形的高   @height
+// *    颜色         @color
+.ico-star-six(@height:20px, @color:#000) {
+    @_offsetTop : round(@height / 3);
+    @_offsetLeft : round(@height * pow(3, -1/2));
+    position: relative;
+    .db_EQTriangle(top, @height, 60deg, @color);
+    &:after {
+        content: "";
+        position: absolute;
+        .db_EQTriangle(bottom, @height, 60deg, @color);
+        top: @_offsetTop;
+        left: -@_offsetLeft;
+    }
+}
+
+//八角星绘制{II}(IE9+)
+// *    矩形的高    @height
+// *    颜色        @color
+.ico-star-eight(@height:20px, @color:#000) {
+    @_offsetTop: round(( pow(2, 1/2) - 1 ) * @height / 2);
+    @_offsetLeft: @height/2;
+    position: relative;
+    top : @_offsetTop;
+    .db_square(@height, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top: -@_offsetLeft;
+        left: -@_offsetLeft;
+        .db_square(@height, @color);
+        .tranRotate(45deg);
+    }
+}
+
+//十二角星绘制{III}(IE9+)
+// *    矩形的高    @height
+// *    颜色        @color
+.ico-star-twelve(@height:20px, @color:#000) {
+    @_offsetTop : round((pow(3, -1/2) * 2 - 1 ) * @height);
+    @_offsetLeft: @height/2;
+    position: relative;
+    top: @_offsetTop;
+    .db_square(@height, @color);
+    &:before, &:after {
+        content: "";
+        position: absolute;
+        top: -@_offsetLeft;
+        left: -@_offsetLeft;
+        .db_square(@height, @color);
+    }
+    &:before {
+        .tranRotate(30deg);
+    }
+    &:after {
+        .tranRotate(60deg);
+    }
+}
+
+//五边形绘制{II}(IE9+)
+// *    边长      @border
+// *    颜色      @color
+.ico-border-five(@border:16px, @color:#000) {
+    @_mainHeight : round(sin(72deg) * @border);
+    @_subHeight : round(sin(36deg) * @border);
+    @_offsetTop : round(@_mainHeight + @_subHeight);
+    @_offsetLeft : round(tan(18deg) * @border);
+    position: relative;
+    top : @_subHeight;
+    .db_EQTrapezoid(bottom, @_mainHeight, @border, 36deg, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top : -@_offsetTop;
+        left: -@_offsetLeft;
+        .db_EQTriangle(top, @_subHeight, 108deg, @color);
+    }
+}
+
+//六边形绘制{II}(IE9+)
+// *    边长      @border
+// *    颜色      @color
+.ico-border-six(@border:14px, @color:#000) {
+    @_height: round(cos(30deg) * @border);
+    @_offsetLeft: round(sin(30deg) * @border);
+    position: relative;
+    .db_EQTrapezoid(top, @_height, @border, 60deg, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top: @_height;
+        left: -@_offsetLeft;
+        .db_EQTrapezoid(bottom, @_height, @border, 60deg, @color);
+    }
+}
+
+//八边形绘制{III}(IE9+)
+// *    边长      @border
+// *    颜色      @color
+.ico-border-eight(@border:10px, @color:#000) {
+    @_mainWidth: round(@border + 2 * sin(30deg) * @border);
+    @_subHeight: round(cos(30deg) * @border);
+    @_offsetTop: @_subHeight + @border / 2;
+    @_offsetLeft: @_mainWidth / 2;
+    position: relative;
+    top: @_subHeight;
+    .db_rect(@_mainWidth, @border, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top: -@_offsetTop;
+        left: -@_offsetLeft;
+        .db_EQTrapezoid(top, @_subHeight, @border, @_mainWidth, @color);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -@_offsetTop;
+        left: -@_offsetLeft;
+        .db_EQTrapezoid(bottom, @_subHeight, @border, @_mainWidth, @color);
+    }
+}
+
+//心形绘制{III}(IE9+)
+// *    宽        @border
+// *    颜色      @color
+.ico-heart(@border:18px, @color:#000) {
+    @_radius: round(@border / 2);
+    @_offset:@border - 1px;
+    @_offsetTop: round(@_offset - @_radius);
+    .tranRotate(45deg);
+    position:relative;
+    top:@_offsetTop;
+    .db_square(@border, @color);
+    &:before {
+        content: "";
+        position: absolute;
+        top: -@_radius;
+        left: -@_offset;
+        .tranRotate(-45deg);
+        .db_HFCircle(top-left, @_radius, @color);
+    }
+    &:after {
+        content: "";
+        position: absolute;
+        top: -@_offset;
+        left: -@_radius;
+        .tranRotate(-45deg);
+        .db_HFCircle(top-right, @_radius, @color);
+    }
+}
+
+
+
