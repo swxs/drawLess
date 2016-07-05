@@ -60,7 +60,7 @@
 //*     宽           @width
 //*     高           @height
 //*     颜色         @color
-.ico-star-four(@width:10px,@height:10px,@color:#000) {
+.ico-star-four(@width:26px,@height:26px,@color:#000) {
     @_width : round(@width/2);
     @_height : round(@height/2);
     position: relative;
@@ -68,7 +68,8 @@
     &:before {
         content:'';
         position:absolute;
-        top: -@_height;
+        top: @_height;
+        left: -@_width;
         .db_EQTriangle(bottom, @_height, @_width, @color);
     }
 }
@@ -164,7 +165,7 @@
 //五边形绘制{II}(IE9+)
 // *    边长      @border
 // *    颜色      @color
-.ico-border-five(@border:10px, @color:#000) {
+.ico-border-five(@border:16px, @color:#000) {
     @_mainHeight : round(sin(72deg) * @border);
     @_subHeight : round(sin(36deg) * @border);
     @_offsetTop : round(@_mainHeight + @_subHeight);
@@ -184,7 +185,7 @@
 //六边形绘制{II}(IE9+)
 // *    边长      @border
 // *    颜色      @color
-.ico-border-six(@border:10px, @color:#000) {
+.ico-border-six(@border:14px, @color:#000) {
     @_height: round(cos(30deg) * @border);
     @_offsetLeft: round(sin(30deg) * @border);
     position: relative;
@@ -228,10 +229,13 @@
 //心形绘制{III}(IE9+)
 // *    宽        @border
 // *    颜色      @color
-.ico-heart(@border:10px, @color:#000) {
+.ico-heart(@border:18px, @color:#000) {
     @_radius: round(@border / 2);
     @_offset:@border - 1px;
+    @_offsetTop: round(@_offset - @_radius);
     .tranRotate(45deg);
+    position:relative;
+    top:@_offsetTop;
     .db_square(@border, @color);
     &:before {
         content: "";
@@ -239,7 +243,7 @@
         top: -@_radius;
         left: -@_offset;
         .tranRotate(-45deg);
-        .db_HFCircular(top-left, @_radius, @color);
+        .db_HFCircle(top-left, @_radius, @color);
     }
     &:after {
         content: "";
@@ -247,7 +251,7 @@
         top: -@_offset;
         left: -@_radius;
         .tranRotate(-45deg);
-        .db_HFCircular(top-right, @_radius, @color);
+        .db_HFCircle(top-right, @_radius, @color);
     }
 }
 

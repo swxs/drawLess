@@ -473,13 +473,13 @@ i {
   border-right: 10px solid #000000;
   border-left: 10px solid transparent;
 }
-.test81 {
+.test100 {
   position: relative;
   border-bottom: 10px solid #000000;
   border-bottom: 10px solid #000000 \9;
   border-left: 27px dashed transparent;
 }
-.test81:before {
+.test100:before {
   content: '';
   position: absolute;
   left: -8px;
@@ -487,40 +487,95 @@ i {
   border-bottom: 10px solid #ffffff \9;
   border-left: 8px dashed transparent;
 }
-.test82 {
+.test101 {
   position: relative;
   border-bottom: 16px solid #000000;
   border-bottom: 16px solid #000000 \9;
   border-left: 44px dashed transparent;
 }
-.test82:before {
+.test101:before {
   content: '';
   position: absolute;
   border-bottom: 16px solid #000000;
   border-bottom: 16px solid #000000 \9;
   border-right: 28px dashed transparent;
 }
-.test83 {
+.test102 {
   position: relative;
   border-bottom: 17px solid #000000;
   border-bottom: 17px solid #000000 \9;
   border-right: 29px dashed transparent;
 }
-.test83:before {
+.test102:before {
   content: '';
   position: absolute;
   border-bottom: 17px solid #ffffff;
   border-bottom: 17px solid #ffffff \9;
   border-right: 10px dashed transparent;
 }
-.test84 {
+.test103 {
+  position: relative;
+  border-bottom: 13px solid #000000;
+  border-bottom: 13px solid #000000 \9;
+  border-right: 13px dashed transparent;
+  border-left: 13px dashed transparent;
+}
+.test103:before {
+  content: '';
+  position: absolute;
+  top: 13px;
+  left: -13px;
+  border-top: 13px solid #000000;
+  border-top: 13px solid #000000 \9;
+  border-right: 13px dashed transparent;
+  border-left: 13px dashed transparent;
+}
+.test104 {
+  position: relative;
+  top: 10px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 14px dashed transparent;
+  border-left: 14px dashed transparent;
+}
+.test104:before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -14px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 14px dashed transparent;
+  border-left: 14px dashed transparent;
+  -webkit-transform: rotate(70deg);
+  -moz-transform: rotate(70deg);
+  -ms-transform: rotate(70deg);
+  -o-transform: rotate(70deg);
+  transform: rotate(70deg);
+}
+.test104:after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -14px;
+  border-top: 10px solid #000000;
+  border-top: 10px solid #000000 \9;
+  border-right: 14px dashed transparent;
+  border-left: 14px dashed transparent;
+  -webkit-transform: rotate(-70deg);
+  -moz-transform: rotate(-70deg);
+  -ms-transform: rotate(-70deg);
+  -o-transform: rotate(-70deg);
+  transform: rotate(-70deg);
+}
+.test105 {
   position: relative;
   border-bottom: 20px solid #000000;
   border-bottom: 20px solid #000000 \9;
   border-right: 12px dashed transparent;
   border-left: 12px dashed transparent;
 }
-.test84:after {
+.test105:after {
   content: "";
   position: absolute;
   border-top: 20px solid #000000;
@@ -530,70 +585,166 @@ i {
   top: 7px;
   left: -12px;
 }
-.test85 {
+.test106 {
   position: relative;
-  top: 12px;
-  width: 20px;
-  border-top: 19px solid #000000;
-  border-top: 19px solid #000000 \9;
-  border-right: 6px dashed transparent;
-  border-left: 6px dashed transparent;
-}
-.test85:before {
-  content: "";
-  position: absolute;
-  top: -31px;
-  left: -6px;
-  border-bottom: 12px solid #000000;
-  border-bottom: 12px solid #000000 \9;
-  border-right: 17px dashed transparent;
-  border-left: 17px dashed transparent;
-}
-.test86 {
-  position: relative;
-  width: 20px;
-  border-bottom: 17px solid #000000;
-  border-bottom: 17px solid #000000 \9;
-  border-right: 10px dashed transparent;
-  border-left: 10px dashed transparent;
-}
-.test86:before {
-  content: "";
-  position: absolute;
-  top: 17px;
-  left: -10px;
-  width: 20px;
-  border-top: 17px solid #000000;
-  border-top: 17px solid #000000 \9;
-  border-right: 10px dashed transparent;
-  border-left: 10px dashed transparent;
-}
-.test87 {
-  position: relative;
-  top: 14px;
+  top: 4px;
   border-style: solid;
   border-color: #000000;
-  border-width: 8px 16px;
+  border-width: 10px;
 }
-.test87:before {
+.test106:before {
   content: "";
   position: absolute;
-  top: -22px;
-  left: -16px;
-  width: 16px;
-  border-bottom: 14px solid #000000;
-  border-bottom: 14px solid #000000 \9;
-  border-right: 8px dashed transparent;
-  border-left: 8px dashed transparent;
+  top: -10px;
+  left: -10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 10px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-.test87:after {
+.test107 {
+  position: relative;
+  top: 3px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 10px;
+}
+.test107:before,
+.test107:after {
   content: "";
   position: absolute;
-  bottom: -22px;
-  left: -16px;
+  top: -10px;
+  left: -10px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 10px;
+}
+.test107:before {
+  -webkit-transform: rotate(30deg);
+  -moz-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  -o-transform: rotate(30deg);
+  transform: rotate(30deg);
+}
+.test107:after {
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -ms-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
+  transform: rotate(60deg);
+}
+.test108 {
+  position: relative;
+  top: 9px;
   width: 16px;
-  border-top: 14px solid #000000;
-  border-top: 14px solid #000000 \9;
-  border-right: 8px dashed transparent;
-  border-left: 8px dashed transparent;
+  border-top: 15px solid #000000;
+  border-top: 15px solid #000000 \9;
+  border-right: 5px dashed transparent;
+  border-left: 5px dashed transparent;
+}
+.test108:before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: -5px;
+  border-bottom: 9px solid #000000;
+  border-bottom: 9px solid #000000 \9;
+  border-right: 12px dashed transparent;
+  border-left: 12px dashed transparent;
+}
+.test109 {
+  position: relative;
+  width: 14px;
+  border-bottom: 12px solid #000000;
+  border-bottom: 12px solid #000000 \9;
+  border-right: 7px dashed transparent;
+  border-left: 7px dashed transparent;
+}
+.test109:before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  left: -7px;
+  width: 14px;
+  border-top: 12px solid #000000;
+  border-top: 12px solid #000000 \9;
+  border-right: 7px dashed transparent;
+  border-left: 7px dashed transparent;
+}
+.test110 {
+  position: relative;
+  top: 9px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 5px 10px;
+}
+.test110:before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -10px;
+  width: 10px;
+  border-bottom: 9px solid #000000;
+  border-bottom: 9px solid #000000 \9;
+  border-right: 5px dashed transparent;
+  border-left: 5px dashed transparent;
+}
+.test110:after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  left: -10px;
+  width: 10px;
+  border-top: 9px solid #000000;
+  border-top: 9px solid #000000 \9;
+  border-right: 5px dashed transparent;
+  border-left: 5px dashed transparent;
+}
+.test111 {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: relative;
+  top: 8px;
+  border-style: solid;
+  border-color: #000000;
+  border-width: 9px;
+}
+.test111:before {
+  content: "";
+  position: absolute;
+  top: -9px;
+  left: -17px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-radius: 9px;
+  border-top: 9px solid #000000;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-left: 9px solid #000000;
+}
+.test111:after {
+  content: "";
+  position: absolute;
+  top: -17px;
+  left: -9px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  border-radius: 9px;
+  border-top: 9px solid #000000;
+  border-bottom: 9px solid transparent;
+  border-right: 9px solid #000000;
+  border-left: 9px solid transparent;
 }

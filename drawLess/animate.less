@@ -1,0 +1,82 @@
+//  动画
+//  
+//  .tranAll(@t:200ms, @d:0s, @s:linear)    状态变化                        对象:all @t:变化时间(ms,s) @s:类型(默认:linear)(ease ease-in ease-out ease-in-out) @d:延迟(s,ms默认0s)
+//  .tranTranslate(@w,@h)                   平移                            @w\y:+/-x\y轴方向()px
+//  .tranOrigin(@w,@h)                      坐标原点变化                    @w\h:x\y轴坐标(默认50%\50%)
+//  .tranRotate(@a)                         旋转                            @a:旋转角度(deg)
+//  .tranSkew(@w,@h)                        扭曲                            @w\h:绕x\y轴扭曲度(deg)
+//  .tranScale(@w,@h)                       缩放                            @w\h:x\y轴倍数(默认1\1)
+//  .filterGray(@c:100%)                    灰度                            @c:灰度(%)
+//  .filterBlur(@b)                         模糊                            @b:模糊度
+//  .filterAlpha(@o:100)                    透明                            @o:透明度
+
+//变换
+.tranAll(@t:200ms, @d:0s, @s:linear) {
+    -webkit-transition: all @t @s @d;
+       -moz-transition: all @t @s @d;
+        -ms-transition: all @t @s @d;
+         -o-transition: all @t @s @d;
+            transition: all @t @s @d;
+}
+//坐标
+.tranOrigin(@w,@h) {
+    -webkit-transform-origin: @w @h;
+       -moz-transform-origin: @w @h;
+        -ms-transform-origin: @w @h;
+         -o-transform-origin: @w @h;
+            transform-origin: @w @h;
+}
+//旋转
+.tranRotate(@a) {
+    -webkit-transform: rotate(@a);
+       -moz-transform: rotate(@a);
+        -ms-transform: rotate(@a);
+         -o-transform: rotate(@a);
+            transform: rotate(@a);
+}
+//移动
+.tranTranslate(@w,@h) {
+    -webkit-transform: translate(@w, @h);
+       -moz-transform: translate(@w, @h);
+        -ms-transform: translate(@w, @h);
+         -o-transform: translate(@w, @h);
+            transform: translate(@w, @h);
+}
+//伸缩
+.tranScale(@w,@h) {
+    -webkit-transform: scale(@w,@h);
+       -moz-transform: scale(@w,@h);
+        -ms-transform: scale(@w,@h);
+         -o-transform: scale(@w,@h);
+            transform: scale(@w,@h);
+}
+//扭曲
+.tranSkew(@w,@h) {
+    -webkit-transform: skew(@w,@h);
+       -moz-transform: skew(@w,@h);
+        -ms-transform: skew(@w,@h);
+         -o-transform: skew(@w,@h);
+            transform: skew(@w,@h);
+  
+}
+//灰度
+.filterGray(@c:100%) {
+    -webkit-filter: grayscale(@c);
+       -moz-filter: grayscale(@c);
+        -ms-filter: grayscale(@c);
+         -o-filter: grayscale(@c);
+            filter: grayscale(@c);
+}
+//模糊
+.filterBlur(@f) {
+    -webkit-filter: blur(@f);
+        -ms-filter: blur(@f);
+            filter: blur(@f);
+            filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=@f, MakeShadow=false);  
+}
+//透明
+.filterAlpha(@o:100) {
+    opacity: (@o / 100);
+    *filter: alpha(opacity=@o);
+    filter: alpha(opacity=@o) ~"\9";
+}
