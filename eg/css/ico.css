@@ -8,6 +8,7 @@ div {
   display: inline-block;
   box-sizing: border-box;
   text-align: center;
+  line-height: 40px;
   vertical-align: middle;
   width: 41px;
   height: 41px;
@@ -73,7 +74,6 @@ div {
   width: 28px;
   height: 18px;
   overflow: hidden;
-  margin: 8px 3px;
   border: 2px solid #000000;
 }
 .ico_letter:after,
@@ -149,7 +149,6 @@ div {
   text-align: center;
   text-indent: -9999px;
   direction: ltr;
-  margin-top: 5px;
   width: 10px;
   height: 10px;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#000000), color-stop(0.5, #000000), color-stop(0.5, #ffffff), to(#ffffff));
@@ -179,7 +178,6 @@ div {
   text-align: center;
   text-indent: -9999px;
   direction: ltr;
-  margin-top: 5px;
   width: 10px;
   height: 10px;
   background: -webkit-gradient(linear, 0 0, 100% 0, from(#000000), color-stop(0.5, #000000), color-stop(0.5, #ffffff), to(#ffffff));
@@ -209,18 +207,8 @@ div {
   text-align: center;
   text-indent: -9999px;
   direction: ltr;
-  width: 12px;
-  height: 12px;
-  top: 12px;
-  left: -10px;
-  border: 2px solid #000000;
-  -moz-border-radius: 50% 50% 0 50%;
-  border-radius: 50% 50% 0 50%;
-  -webkit-transform: rotate(-45deg);
-  -moz-transform: rotate(-45deg);
-  -ms-transform: rotate(-45deg);
-  -o-transform: rotate(-45deg);
-  transform: rotate(-45deg);
+  width: 40px;
+  height: 20px;
 }
 .ico_infi:after,
 .ico_infi:before {
@@ -228,14 +216,115 @@ div {
   display: inline-block;
   pointer-events: none;
 }
-.ico_infi:before {
+.ico_infi:before,
+.ico_infi:after {
   content: "";
   position: absolute;
   width: 12px;
   height: 12px;
-  top: 12px;
-  left: 12px;
   border: 2px solid #000000;
   -moz-border-radius: 0 50% 50% 50%;
   border-radius: 0 50% 50% 50%;
+}
+.ico_infi:before {
+  left: 2px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.ico_infi:after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.ico-egg {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+  font-style: normal;
+  position: relative;
+  text-align: center;
+  text-indent: -9999px;
+  direction: ltr;
+  width: 20px;
+  height: 28px;
+  background-color: #000000;
+  -webkit-border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+}
+.ico-egg:after,
+.ico-egg:before {
+  content: '';
+  display: inline-block;
+  pointer-events: none;
+}
+.ico-ban {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+  font-style: normal;
+  text-align: center;
+  text-indent: -9999px;
+  direction: ltr;
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  position: relative;
+}
+.ico-ban:after,
+.ico-ban:before {
+  content: '';
+  display: inline-block;
+  pointer-events: none;
+}
+.ico-ban:before,
+.ico-ban:after {
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  left: 0px;
+}
+.ico-ban:before {
+  top: -6px;
+}
+.ico-ban:after {
+  top: 6px;
+}
+.ico-close {
+  display: inline-block;
+  line-height: 40px;
+  vertical-align: middle;
+  font-style: normal;
+  text-align: center;
+  text-indent: -9999px;
+  direction: ltr;
+  width: 20px;
+  position: relative;
+}
+.ico-close:after,
+.ico-close:before {
+  content: '';
+  display: inline-block;
+  pointer-events: none;
+}
+.ico-close:before,
+.ico-close:after {
+  width: 20px;
+  height: 2px;
+  background-color: #000000;
+  position: absolute;
+  left: 0px;
+}
+.ico-close:before {
+  top: 0px;
+  transform: rotate(45deg);
+}
+.ico-close:after {
+  top: 0px;
+  transform: rotate(-45deg);
 }
